@@ -26,6 +26,9 @@ function Header() {
         <header>
             
             <Link to='/'><h2>Pic Some</h2></Link>
+            
+            <p>Please hove over the images and click on + icon, if you like. then click on Cart ICON in top left corder to go to cart page.</p>
+           
             <Link to='/Cart'>{cartChange()}</Link>
         </header>
     )

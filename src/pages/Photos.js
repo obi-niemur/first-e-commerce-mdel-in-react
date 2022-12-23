@@ -9,13 +9,17 @@ function Photos() {
     
     const test = context.allPhotos.map((con, index)=>{
         return(
+            <>
             <Images  key={con.id} img={con} className={getClass(index)} />
+            
+            </>
         )
     })
     
     return (
         <main className="photos">
             {test}
+            
         </main>
     )
 }
