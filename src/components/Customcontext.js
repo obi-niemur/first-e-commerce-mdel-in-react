@@ -10,7 +10,7 @@ function CustomContextProvider (props){
     function placeOrder(){
         setTimeout(()=>{
             setCartItems([])
-            console.log('oreder placed')
+            window.alert('your order has been placed')
             
         }, '1000')
     }

@@ -33,7 +33,17 @@ function Images({ img, className }) {
             onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}
         >
             <img src={img.url} className='image-grid' />
-            <button>Add to Cart</button>
+            {/* button for adding the image to cart */}
+            <button  className='buttonStyle'
+                onClick={() => {
+                    return (
+                        context.addFavtoCart(img),
+                        fillCartChange(),
+                        context.addItemtoCart(img))
+                }}
+            >
+                Add to Cart
+                </button>
             {hoverState && <i onClick={() => {
                return( context.changetoFav(img.id),
                     fillheart())

@@ -6,14 +6,15 @@ import {CustomContext} from '../components/Customcontext'
 function Cart() {
     const {cartItems, placeOrder} = React.useContext(CustomContext)
     const [order, setOrder] = React.useState(false)
-    console.log(cartItems.length)
+  
     
     function orderPlease(){
         if(cartItems.length === 0){
             setOrder(false)
-        }else{
-            setOrder(prev=>!prev)
-            placeOrder()
+        }else if(cartItems.length != 0){
+            placeOrder();
+            setOrder(true)
+            
         }
     }
     
@@ -34,7 +35,8 @@ function Cart() {
             {cartItemElements}
             <p className="total-cost">Total: {totalCostDisplay}</p>
             <div className="order-button">
-                <button onClick={orderPlease}>{`${(order) ? 'please wait...' : 'Place Order'}`}</button>
+                 <button onClick={orderPlease}>{`${(order) ? 'please wait...' : 'Place Order'}`}</button> 
+                
             </div>
         </main>
     )

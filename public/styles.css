@@ -58,7 +58,7 @@ div.order-button>button:disabled {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 20px 0;
+    margin: 20px ;
 }
 
 .cart-item img {
@@ -77,6 +77,7 @@ img.image-grid {
 
 .image-container {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .favorite {
@@ -146,4 +147,9 @@ a:hover {
 
 a:active {
     color: var(--light-blue);
+}
+
+
+.buttonStyle{
+    margin-top: 10px;
 }
