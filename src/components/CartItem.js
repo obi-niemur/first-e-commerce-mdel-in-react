@@ -3,6 +3,7 @@ import {CustomContext} from '../components/Customcontext'
 
 
 function CartItem({item}){
+    console.log(item);
     
     const {removeItem} = React.useContext(CustomContext)
     return(

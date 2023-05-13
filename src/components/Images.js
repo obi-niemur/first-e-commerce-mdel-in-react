@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types';
-import { CustomContext } from '../components/Customcontext'
+import { CustomContext } from './Customcontext'
 function Images({ img, className }) {
     const [hoverState, setHoverState] = React.useState(false)
     const [heart, setHeart] = React.useState(false)
@@ -34,6 +34,9 @@ function Images({ img, className }) {
         >
             <img src={img.url} className='image-grid' />
             {/* button for adding the image to cart */}
+
+            <div class="wrapper">
+
             <button  className='buttonStyle'
                 onClick={() => {
                     return (
@@ -43,7 +46,16 @@ function Images({ img, className }) {
                 }}
             >
                 Add to Cart
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </button>
+            </div>
+
+
+
             {hoverState && <i onClick={() => {
                return( context.changetoFav(img.id),
                     fillheart())
