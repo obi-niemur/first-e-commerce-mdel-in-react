@@ -13,12 +13,14 @@ body {
     padding: 0;
 }
 
+.headerclass:hover {text-decoration: none;}
+
 main.photos {
-    margin-top: 20px;
+    margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 10px;
-    height: 100px;
+    position: relative;
     text-align: center;
 
 }
@@ -159,7 +161,7 @@ a:active {
 
 .wrapper {
     position: absolute;
-    /* top: 50%; */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: fit-content;
@@ -302,20 +304,46 @@ button:hover span {
 /* Footer section */
 
 .footerSection {
-    position: absolute;
-    top: 300%;
+    position: relative;
     z-index: 3;
     background-color: #a5197b;
     width: 100%;
+    bottom: -38px;
+    padding: 24px 50px 60px 60px;
 }
-.footerSection label{
+
+.footerSection label {
     cursor: pointer;
+    margin-left: 16px;
+    color: #fff;
+    background: #18603e;
+    opacity: 3.1;
+    padding: 4px 10px 5px 10px;
 }
-.footerSection{list-style: none;}
-.footerSection .signup{text-align: center;}
+
+.footerSection {
+    list-style: none;
+}
+
+.footerSection .signup {
+    text-align: center;
+
+}
+
+
+.footerSection .signup input {
+    width: 400px;
+    max-width: 100%;
+    padding: 4px 10px 5px 10px;
+
+}
+
 
 /* Navigation page */
-.nav{position: absolute; right: 50px;}
+.nav {
+    position: absolute;
+    right: 50px;
+}
 
 
 /* All Media Query */
@@ -326,7 +354,7 @@ button:hover span {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
-        height: 100px;
+
 
     }
 

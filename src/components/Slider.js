@@ -16,10 +16,7 @@ function Slider() {
                     src={pic1}
                     alt="First slide"
                 />
-                {/* <Carousel.Caption>
-                    <h3>Welcome to Kapor Clothing Store</h3>
-                    <p>Fasion for everyone</p>
-                </Carousel.Caption> */}
+              
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -28,10 +25,7 @@ function Slider() {
                     alt="Second slide"
                 />
 
-                {/* <Carousel.Caption>
-                    <h3>Welcome to Kapor Clothing Store</h3>
-                    <p>Fasion for everyone</p>
-                </Carousel.Caption> */}
+               
             </Carousel.Item>
             <Carousel.Item>
                 <img
@@ -40,10 +34,7 @@ function Slider() {
                     alt="Third slide"
                 />
 
-                {/* <Carousel.Caption>
-                    <h3>Welcome to Kapor Clothing Store</h3>
-                    <p>Fasion for everyone</p>
-                </Carousel.Caption> */}
+               
             </Carousel.Item>
         </Carousel>
     );

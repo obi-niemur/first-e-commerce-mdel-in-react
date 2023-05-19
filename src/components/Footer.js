@@ -1,4 +1,5 @@
 import React from "react";
+// import Nav from 'react-bootstrap/Nav';
 function Footer(){
     return(
         <div className="footerSection">
@@ -8,8 +9,8 @@ function Footer(){
             </div>
             <div>
                 <li>
-                    <ul>Contact Us</ul>
-                    <ul>About Us</ul>
+                    <a href="Contact"><ul>Contact Us</ul></a>
+                    <a href="About"><ul>About Us</ul></a>
                 </li>
             </div>
             

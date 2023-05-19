@@ -9,21 +9,34 @@ function Cart() {
   
     
     function orderPlease(){
-        if(cartItems.length === 0){
-            setOrder(false)
-        }else if(cartItems.length != 0){
+        if(cartItems.length !== 0){
             placeOrder();
             setOrder(true)
+        }else if(cartItems.length === 0){
+            setOrder(false)
+            
             
         }
     }
+
+    
+    
+    const test = cartItems.reduce((tot, arr)=>{
+        return tot + arr.price
+    },0)
     
     
     
-    
-    const totalCost = 5.99 * cartItems.length
-    const totalCostDisplay = totalCost.toLocaleString("en-US", {style: "currency", currency: "USD"})
+    const totalCost = test 
+    const totalCostDisplay = totalCost.toLocaleString("en-US", { style: "currency", currency: "USD" })
+
+
+    console.log("Price: " + test);
+    console.log("Total Cost is: " + totalCost);
+    console.log("Total cart items: " + cartItems.length);
+
     const cartItemElements = cartItems.map(item=>{
+       
         return(
             <CartItem key={item.id} item={item}   />
         )
@@ -36,7 +49,8 @@ function Cart() {
             <p className="total-cost">Total: {totalCostDisplay}</p>
             <div className="order-button">
                  <button onClick={orderPlease}>{`${(order) ? 'please wait...' : 'Place Order'}`}</button> 
-                
+             
+               
             </div>
         </main>
     )

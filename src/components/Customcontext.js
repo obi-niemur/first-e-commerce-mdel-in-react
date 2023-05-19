@@ -9,8 +9,9 @@ function CustomContextProvider (props){
     
     function placeOrder(){
         setTimeout(()=>{
-            setCartItems([])
+            
             window.alert('your order has been placed')
+            setCartItems([])
             
         }, '1000')
     }
@@ -58,7 +59,7 @@ function CustomContextProvider (props){
       
     React.useEffect(()=>{
         fetch("https://raw.githubusercontent.com/obi-niemur/images/master/images.json")
-         // https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json
+         
         .then(response=> response.json())
         .then(data=> {
             setAllPhotos(data)})

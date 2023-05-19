@@ -2,7 +2,6 @@ import React,{useContext} from "react"
 import {CustomContext} from '../components/Customcontext'
 import {getClass} from '../utils/index'
 import Images from '../components/Images'
-import Footer from "../components/Footer"
 import Slider from "../components/Slider"
 
 
@@ -27,9 +26,7 @@ function Photos() {
         <main className="photos">
             {getPhotos}
         </main>
-        <div>
-            <Footer />
-        </div>
+        
           
         </>
     )

@@ -54,6 +54,11 @@ function Images({ img, className }) {
                 </button>
             </div>
 
+            <p className="Price">
+                Price: {img.price}
+            </p>
+      
+
 
 
             {hoverState && <i onClick={() => {
