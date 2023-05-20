@@ -1,7 +1,13 @@
 import React from "react"
 import {Link} from 'react-router-dom'
 import { CustomContext } from '../components/Customcontext'
+import Container from 'react-bootstrap/Container';
+
+
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
 
  
 
@@ -21,25 +27,30 @@ function Header() {
     return (
         <header>
             
-            <Link className="headerclass" to='/'><h2>Kapor Clothing Store</h2></Link>
-            
-            {/* <p>Please hove over the images and click on + icon, if you like. then click on Cart ICON in top left corder to go to cart page.</p> */}
-            <Nav defaultActiveKey="/home" as="ul">
-                <Nav.Item as="li">
-                    <Nav.Link href='About'>About Us</Nav.Link>
-                </Nav.Item>
-                <Nav.Item as="li">
-                    <Nav.Link href="Contact">Contact Us</Nav.Link>
-                </Nav.Item>
+          
 
-                <Nav.Item as="li">
-                    <Nav.Link href="Privacy">Privacy Policy</Nav.Link>
-                </Nav.Item>
+            <Navbar bg="light" expand="lg">
+                <Container>
+                    <Navbar.Brand className="headerclass" href="/"><h2>Kapor Clothing Store</h2></Navbar.Brand>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link href="/About">About</Nav.Link>
+                            <Nav.Link href="/Contact">Contact</Nav.Link>
+                            <Nav.Link href="/Privacy">Privacy</Nav.Link>
+                            <Nav.Link href="/Values">Values</Nav.Link>
+                            <Nav.Link href="/Career">Career</Nav.Link>
+                            <Nav.Link href="/Coupon">Coupon</Nav.Link>
+                            <Nav.Link href="/Customer">Customer</Nav.Link>
+                            <Nav.Link href="/Locator">Locator</Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
 
-                
-                
-            </Nav>
-            {/* <Link to='/About'>{Aboutus}</Link> */}
+
+
+           
             <Link to='/Cart'>{cartChange()}</Link>
         </header>
     )

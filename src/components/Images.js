@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import PropTypes from 'prop-types';
 import { CustomContext } from './Customcontext'
+
 function Images({ img, className }) {
     const [hoverState, setHoverState] = React.useState(false)
     const [heart, setHeart] = React.useState(false)
@@ -29,6 +30,9 @@ function Images({ img, className }) {
     }
 
     return (
+        
+        
+        
         <div className={`${className} image-container`}
             onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut}
         >
@@ -76,6 +80,7 @@ function Images({ img, className }) {
                 className={`${(fillCart) ? 'ri-shopping-cart-fill cart' : 'ri-add-circle-line cart'}`}>
             </i>}
         </div>
+     
     )
 }
 

@@ -1,10 +1,27 @@
 import React from "react";
+import Breadcrumb from 'react-bootstrap/Breadcrumb';
 
 
 
 function Privacy() {
 
     return (
+        <>
+
+        <Breadcrumb>
+                <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                <Breadcrumb.Item href="/About">About</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Contact">Contact Us</Breadcrumb.Item>
+                <Breadcrumb.Item active>Privacy Policy</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Values">Our Values</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Career">Careers</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Coupon">Coupon & Reward</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Customer">Customer Support</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Locator">Store Locator</Breadcrumb.Item>
+                <Breadcrumb.Item href="/Cart">Cart</Breadcrumb.Item>
+            </Breadcrumb>
+        
+      
         <div id="aboutus">
             <h1>Privacy Policy</h1>
             <p>At <strong>Kapor Clothing Store</strong>, we are committed to protecting the privacy and security of your personal information.
@@ -53,6 +70,7 @@ function Privacy() {
 
 
         </div>
+        </>
 
     )
 }
